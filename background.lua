@@ -1,8 +1,8 @@
 Background = {}
 
 function Background:load()
-    self.universe = love.graphics.newImage("assets/universe.png")
-    self.planets = love.graphics.newImage("assets/planets.png")
+    self.universe = love.graphics.newImage("assets/images/universe.png")
+    self.planets = love.graphics.newImage("assets/images/planets.png")
     self.width = self.planets:getWidth()
     self.height = self.planets:getHeight()
     self.rotation = 0

@@ -3,7 +3,7 @@ Player = {}
 function Player:load()
     self.x = 50
     self.y = love.graphics.getHeight() / 2
-    self.img = love.graphics.newImage("assets/1.png")
+    self.img = love.graphics.newImage("assets/images/1.png")
     self.width = self.img:getWidth()
     self.height = self.img:getHeight()
     self.speed = 500

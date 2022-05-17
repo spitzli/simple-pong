@@ -14,7 +14,10 @@ function love.load()
         ai = 0
     }
     font = love.graphics.newFont(30)
-    sound = love.audio.newSource("assets/pong.wav", "static")
+    sound = love.audio.newSource("assets/sounds/pong.ogg", "static")
+    music = love.audio.newSource("assets/sounds/background.mp3", "stream")
+    love.audio.setVolume(0.1)
+    music:play()
 end
 
 function love.update(dt)

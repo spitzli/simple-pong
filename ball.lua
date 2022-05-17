@@ -4,7 +4,8 @@ DEFAULT_SPEED = 200
 function Ball:load()
     self.x = love.graphics.getWidth() / 2
     self.y = love.graphics.getHeight() / 2
-    self.img = love.graphics.newImage("assets/ball.png")
+    self.over = love.audio.newSource("assets/sounds/over.ogg", "static")
+    self.img = love.graphics.newImage("assets/images/ball.png")
     self.width = self.img:getWidth()
     self.height = self.img:getHeight()
     self.speed = DEFAULT_SPEED
@@ -69,6 +70,7 @@ function Ball:score()
 end
 
 function Ball:resetPostion(modifier)
+    love.audio.play(self.over)
     self.x = love.graphics.getWidth() / 2 - self.width / 2
     self.y = love.graphics.getHeight() / 2 - self.height / 2
     self.yVel = 0
